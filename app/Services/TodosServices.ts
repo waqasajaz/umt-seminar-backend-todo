@@ -6,9 +6,19 @@ import {
 
 const SERVICE_NAME = "TodosService";
 
-export const indexTodo = async (page: number = 1, page_size: number = 30) => {
+export const indexTodo = async (
+  page: number = 1,
+  page_size: number = 30,
+  status?: null
+) => {
   try {
-    const allTodos = await Todo.query().paginate(page, page_size);
+    let allTodos: any = Todo.query();
+
+    if (status !== null) {
+      allTodos = allTodos.where("status", status === "true" ? 1 : 0);
+    }
+
+    allTodos = await allTodos.paginate(page, page_size);
 
     return await successResponseHandler("Todo Data", {
       todos: allTodos?.all(),

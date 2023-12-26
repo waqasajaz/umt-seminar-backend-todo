@@ -20,8 +20,9 @@ export default class TodosController {
     try {
       const page = request.input("page", 1);
       const page_size = request.input("page_size", 30);
+      const status = request.input("status", null);
 
-      return await indexTodo(page, page_size);
+      return await indexTodo(page, page_size, status);
     } catch (e) {
       return await failResponseHandler(
         `${MODEL_NAME} index failed`,
