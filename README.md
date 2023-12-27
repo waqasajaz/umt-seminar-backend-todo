@@ -2,4 +2,4 @@
 
 ## Frontend Repo
 
-https://github.com/waqasajaz/umt-seminar-backend-todo
+https://github.com/waqasajaz/umt-seminar-frontend-todo
