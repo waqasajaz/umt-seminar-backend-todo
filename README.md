@@ -6,9 +6,18 @@ This project was created by [ExpertsCloud](https://theexpertscloud.com/).
 
 ### Backend
 
-- node js v18.19.0
+- nodejs v18
 - mysql 8.0.35
 
 # adonis requirements
 
 - https://docs.adonisjs.com/guides/database/introduction
+
+### steps
+
+- create .env file and update environments variables according to requirements
+  `cp .env.example .env`
+- run migration
+  `node ace migration:run`
+- start dev application
+  `npm run dev`
