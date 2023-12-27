@@ -16,8 +16,14 @@ This project was created by [ExpertsCloud](https://theexpertscloud.com/).
 ### steps
 
 - create .env file and update environments variables according to requirements
-  `cp .env.example .env`
+  ```bash
+  cp .env.example .env
+  ```
 - run migration
-  `node ace migration:run`
+  ```bash
+  node ace migration:run
+  ```
 - start dev application
-  `npm run dev`
+  ```bash
+  npm run dev
+  ```
